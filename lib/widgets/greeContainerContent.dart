@@ -31,7 +31,6 @@ class GreenContainerContent extends StatelessWidget {
         Container(
           padding: EdgeInsets.symmetric(vertical: 12.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -58,6 +57,7 @@ class GreenContainerContent extends StatelessWidget {
                   style: HEADERPOINTS,
                 ),
               ),
+              Divider(color: GRAY40, height: 4.0,),
               Container(
                 child: Text(
                   "2019",
@@ -70,6 +70,7 @@ class GreenContainerContent extends StatelessWidget {
                   style: HEADERPOINTS,
                 ),
               ),
+              Divider(color: GRAY40, height: 4.0,),
               Container(
                 child: Text(
                   "2020",
@@ -82,6 +83,7 @@ class GreenContainerContent extends StatelessWidget {
                   style: HEADERPOINTS,
                 ),
               ),
+              Divider(color: GRAY40, height: 4.0,),
               Container(
                 child: Text(
                   "2021",
@@ -94,6 +96,7 @@ class GreenContainerContent extends StatelessWidget {
                   style: HEADERPOINTS,
                 ),
               ),
+              Divider(color: GRAY40, height: 4.0,),
             ],
           ),
         )

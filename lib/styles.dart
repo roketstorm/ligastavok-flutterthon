@@ -10,6 +10,8 @@ const Color ORANGE = Color(0xFFFFA100);
 const Color RED = Color(0xFFD51C1C);
 
 const Color GRAY22 = Color(0xFFC7C7C7);
+const Color GRAY40 = Color(0xFF999999);
+const Color GRAY50 = Color(0xFF797979);
 const Color GRAY85 = Color(0xFF262626);
 
 const EdgeInsets CLASSICPADDING =
