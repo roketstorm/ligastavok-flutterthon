@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lsflutterthon/styles.dart';
+import 'package:lsflutterthon/widgets/animations/liveIndicator.dart';
 import 'package:lsflutterthon/widgets/greenContainer.dart';
 
 void main() {
@@ -40,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: CLASSICPADDING,
         child: Column(
-          children: <Widget>[GreenContainer()],
+          children: <Widget>[GreenContainer(), LiveIndicator()],
         ),
       ),
     );

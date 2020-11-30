@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lsflutterthon/styles.dart';
 import 'package:lsflutterthon/widgets/animations/loadingFaceWidget.dart';
+import 'package:lsflutterthon/widgets/greeContainerContent.dart';
 
 class GreenContainer extends StatelessWidget {
   @override
@@ -16,7 +17,12 @@ class GreenContainer extends StatelessWidget {
         ),
         borderRadius: BorderRadius.all(Radius.circular(5.0))
       ),
-      child: LoadingFaceWidget(),
+      child: Column(
+        children: [
+          //LoadingFaceWidget(),
+          GreenContainerContent()
+        ],
+      ),
     );
   }
 
