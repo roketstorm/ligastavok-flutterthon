@@ -11,18 +11,20 @@ class GreenContainerContent extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Opacity(
-                opacity: 0.2,
-                child: Image.network(
-                  "https://www.thesportsdb.com/images/media/team/badge/vvtsyu1455465317.png",
-                  width: MediaQuery.of(context).size.width / 2.3,
+              Expanded(
+                child: Opacity(
+                  opacity: 0.2,
+                  child: Image.network(
+                    "https://www.thesportsdb.com/images/media/team/badge/vvtsyu1455465317.png",
+                  ),
                 ),
               ),
-              Opacity(
-                opacity: 0.2,
-                child: Image.network(
-                  "https://www.thesportsdb.com/images/media/team/badge/obs41m1574507346.png",
-                  width: MediaQuery.of(context).size.width / 2.3,
+              Expanded(
+                child: Opacity(
+                  opacity: 0.2,
+                  child: Image.network(
+                    "https://www.thesportsdb.com/images/media/team/badge/obs41m1574507346.png",
+                  ),
                 ),
               ),
             ],
@@ -45,58 +47,80 @@ class GreenContainerContent extends StatelessWidget {
                   )
                 ],
               ),
-              Container(
-                child: Text(
-                  "2018",
-                  style: HEADERYEAR,
+              Expanded(
+                child: ListView(
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          child: Text(
+                            "2018",
+                            style: HEADERYEAR,
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "2 - 0",
+                            style: HEADERPOINTS,
+                          ),
+                        ),
+                        Divider(
+                          color: GRAY40,
+                          height: 4.0,
+                        ),
+                        Container(
+                          child: Text(
+                            "2019",
+                            style: HEADERYEAR,
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "0 - 1",
+                            style: HEADERPOINTS,
+                          ),
+                        ),
+                        Divider(
+                          color: GRAY40,
+                          height: 4.0,
+                        ),
+                        Container(
+                          child: Text(
+                            "2020",
+                            style: HEADERYEAR,
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "5 - 2",
+                            style: HEADERPOINTS,
+                          ),
+                        ),
+                        Divider(
+                          color: GRAY40,
+                          height: 4.0,
+                        ),
+                        Container(
+                          child: Text(
+                            "2021",
+                            style: HEADERYEAR,
+                          ),
+                        ),
+                        Container(
+                          child: Text(
+                            "3 - 1",
+                            style: HEADERPOINTS,
+                          ),
+                        ),
+                        Divider(
+                          color: GRAY40,
+                          height: 4.0,
+                        ),
+                      ],
+                    )
+                  ],
                 ),
-              ),
-              Container(
-                child: Text(
-                  "2 - 0",
-                  style: HEADERPOINTS,
-                ),
-              ),
-              Divider(color: GRAY40, height: 4.0,),
-              Container(
-                child: Text(
-                  "2019",
-                  style: HEADERYEAR,
-                ),
-              ),
-              Container(
-                child: Text(
-                  "0 - 1",
-                  style: HEADERPOINTS,
-                ),
-              ),
-              Divider(color: GRAY40, height: 4.0,),
-              Container(
-                child: Text(
-                  "2020",
-                  style: HEADERYEAR,
-                ),
-              ),
-              Container(
-                child: Text(
-                  "5 - 2",
-                  style: HEADERPOINTS,
-                ),
-              ),
-              Divider(color: GRAY40, height: 4.0,),
-              Container(
-                child: Text(
-                  "2021",
-                  style: HEADERYEAR,
-                ),
-              ),
-              Container(
-                child: Text(
-                  "3 - 1",
-                  style: HEADERPOINTS,
-                ),
-              ),
-              Divider(color: GRAY40, height: 4.0,),
+              )
             ],
           ),
         )

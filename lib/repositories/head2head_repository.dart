@@ -10,8 +10,8 @@ class Head2HeadRepository {
   Future<Head2Head> getInfo(String team1, String team2) async {
     final Head2Head data =
         await client.getHead2Head(teamId: team1, teamId2: team2);
-    data.team1.imageUrl = await client.getTeamLogo(data.team1.country);
-    data.team2.imageUrl = await client.getTeamLogo(data.team2.country);
+    //data.team1.imageUrl = await client.getTeamLogo(data.team1.country);
+    //data.team2.imageUrl = await client.getTeamLogo(data.team2.country);
     return data;
   }
 }
