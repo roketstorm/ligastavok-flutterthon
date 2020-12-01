@@ -11,16 +11,12 @@ class Head2HeadApiClient {
   static const format = '.json';
 
   final http.Client httpClient;
-  final String teamId;
-  final String teamId2;
 
   Head2HeadApiClient(
-      {@required this.httpClient,
-      @required this.teamId,
-      @required this.teamId2})
+      {@required this.httpClient})
       : assert(httpClient != null);
 
-  Future<Head2Head> getHead2Head() async {
+  Future<Head2Head> getHead2Head({@required teamId, @required teamId2}) async {
     final url =
         "$baseUrl/$languageCode/teams/$teamId/versus/$teamId2/matches$format?api_key=$APIKEY";
     final response = await this.httpClient.get(url);
