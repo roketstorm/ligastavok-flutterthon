@@ -5,7 +5,7 @@ import 'package:lsflutterthon/blocs/head2head_event.dart';
 import 'package:lsflutterthon/blocs/head2head_state.dart';
 import 'package:lsflutterthon/settings.dart';
 import 'package:lsflutterthon/styles.dart';
-import 'package:lsflutterthon/widgets/animations/loadingFaceWidget.dart';
+import 'package:lsflutterthon/widgets/animations/loading_face_widget.dart';
 import 'package:lsflutterthon/widgets/green_container_content.dart';
 
 // Родительский контейнер (Обработка событий из Head2HeadBloc)
