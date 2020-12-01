@@ -1,6 +1,7 @@
 # Liga Stavok Flutterthon 2020
 
 ## Head2Head Widget
+<a href="https://github.com/felangel/bloc"><img src="https://tinyurl.com/bloc-library" alt="Bloc Library"></a>
 ![](https://github.com/roketstorm/ligastavok-flutterthon/blob/master/screen.jpg)
 
 ## Задача
