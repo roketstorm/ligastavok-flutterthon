@@ -17,6 +17,7 @@ class Head2HeadApiClient {
       {@required this.httpClient})
       : assert(httpClient != null);
 
+  // Получение данных из основного Web API (baseUrl)
   Future<Head2Head> getHead2Head({@required teamId, @required teamId2}) async {
     final url =
         "$baseUrl/$languageCode/teams/$teamId/versus/$teamId2/matches$format?api_key=$APIKEY";
@@ -30,6 +31,7 @@ class Head2HeadApiClient {
     return Head2Head.fromJson(h2hJson);
   }
 
+  // Получение данных о логотипе команды из logoUrl
   Future<String> getTeamLogo(String name) async {
     final url =
         "$logoUrl?t=$name";
@@ -39,9 +41,10 @@ class Head2HeadApiClient {
       throw Exception('Error getting info');
     }
 
-    // TODO: check response.body for null
-
     final teamJson = jsonDecode(response.body);
+
+    if (teamJson['teams'] == null) return 'none';
+    
     return teamJson['teams'][0]['strTeamBadge'];
   }
 }

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lsflutterthon/blocs/head2head_event.dart';
@@ -14,6 +12,7 @@ class Head2HeadBloc extends Bloc<Head2HeadEvent, Head2HeadState> {
       : assert(head2headRepository != null),
         super(Head2HeadInitial());
 
+  // Маппинг событий к состояниям
   @override
   Stream<Head2HeadState> mapEventToState(Head2HeadEvent event) async* {
     if (event is Head2HeadRequested) {
@@ -22,7 +21,6 @@ class Head2HeadBloc extends Bloc<Head2HeadEvent, Head2HeadState> {
         final Head2Head head2head = await head2headRepository.getInfo(event.team1, event.team2);
         yield Head2HeadLoadSuccess(head2head: head2head);
       } catch (e) {
-        log(e);
         yield Head2HeadLoadFailure();
       }
     }

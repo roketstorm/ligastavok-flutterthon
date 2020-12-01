@@ -11,11 +11,13 @@ class Head2Head {
   static Head2Head fromJson(dynamic json) {
     List<SportEvent> events = List<SportEvent>();
 
+    // Генерация списка событий
     json['last_meetings']['results'].forEach((elem) => events.add(SportEvent(
         scheduled: DateTime.parse(elem['sport_event']['scheduled']),
         awayScore: elem['sport_event_status']['away_score'],
         homeScore: elem['sport_event_status']['home_score'],
-        winnerId: elem['sport_event_status']['winner_id'])));
+        winnerId: elem['sport_event_status']['winner_id'],
+        matchStatus: elem['sport_event_status']['match_status'])));
 
     return Head2Head(
         team1: Team(

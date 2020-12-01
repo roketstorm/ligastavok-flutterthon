@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Индикатор загрузки с анимацией
 class LoadingFaceWidget extends StatefulWidget {
   @override
   _LoadingFaceWidgetState createState() => _LoadingFaceWidgetState();

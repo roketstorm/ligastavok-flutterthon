@@ -7,6 +7,7 @@ class Head2HeadRepository {
 
   Head2HeadRepository({@required this.client}) : assert(client != null);
 
+  // Получение данных и создание объектов по моделям
   Future<Head2Head> getInfo(String team1, String team2) async {
     final Head2Head data =
         await client.getHead2Head(teamId: team1, teamId2: team2);

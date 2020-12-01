@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lsflutterthon/styles.dart';
 
+// Идикатор "В прямом в эфире" с анимацией
 class LiveIndicator extends StatefulWidget {
   @override
   _LiveIndicatorState createState() => _LiveIndicatorState();
@@ -34,8 +35,8 @@ class _LiveIndicatorState extends State<LiveIndicator> with SingleTickerProvider
           borderRadius: BorderRadius.all(Radius.circular(5.0)),
           color: ORANGE
         ),
-        padding: EdgeInsets.all(4.0),
-        child: Text("LIVE", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0),),
+        padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 2.0),
+        child: Text("LIVE", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10.0),),
       ),
     );
   }

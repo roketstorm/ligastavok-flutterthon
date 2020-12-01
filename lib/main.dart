@@ -8,12 +8,7 @@ import 'package:lsflutterthon/widgets/green_container.dart';
 import 'package:http/http.dart' as http;
 
 void main() {
-  // final Head2HeadRepository head2headRepository = Head2HeadRepository(
-  //     client: Head2HeadApiClient(httpClient: http.Client()));
-
-  runApp(MyApp(
-    // repository: head2headRepository,
-  ));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -55,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: CLASSICPADDING,
         child: Column(
           children: <Widget>[
+            // Создание Head2HeadBloc в текущем контексте
             BlocProvider<Head2HeadBloc>(
                 create: (context) => Head2HeadBloc(
                     head2headRepository: Head2HeadRepository(
