@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lsflutterthon/styles.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:lsflutterthon/widgets/animations/loadingFaceWidget.dart';
 
 class GreenContainerContent extends StatelessWidget {
   @override
@@ -14,16 +16,24 @@ class GreenContainerContent extends StatelessWidget {
               Expanded(
                 child: Opacity(
                   opacity: 0.2,
-                  child: Image.network(
-                    "https://www.thesportsdb.com/images/media/team/badge/vvtsyu1455465317.png",
+                  child: CachedNetworkImage(
+                    imageUrl:
+                        "https://www.thesportsdb.com/images/media/team/badge/vvtsyu1455465317.png",
+                    placeholder: (context, url) =>
+                        Center(child: LoadingFaceWidget()),
+                    errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),
               ),
               Expanded(
                 child: Opacity(
                   opacity: 0.2,
-                  child: Image.network(
-                    "https://www.thesportsdb.com/images/media/team/badge/obs41m1574507346.png",
+                  child: CachedNetworkImage(
+                    imageUrl:
+                        "https://www.thesportsdb.com/images/media/team/badge/obs41m1574507346.png",
+                    placeholder: (context, url) =>
+                        Center(child: LoadingFaceWidget()),
+                    errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),
               ),
