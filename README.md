@@ -9,4 +9,5 @@
 
 ## Ресурсы
 Презентация: [Google Drive (.pdf)](https://drive.google.com/file/d/1LR1s7I9NhUe-mCQRHuKispnO6F-o5z0S/view?usp=sharing)
+
 Видео: [Google Drive (.mp4)](https://drive.google.com/file/d/1rLfopILvO9AtxvZHxHwRaqCEdfYzukq7/view?usp=sharing)
