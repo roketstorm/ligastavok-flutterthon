@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lsflutterthon/styles.dart';
 import 'package:lsflutterthon/widgets/animations/liveIndicator.dart';
-import 'package:lsflutterthon/widgets/greenContainer.dart';
+import 'package:lsflutterthon/widgets/green_container.dart';
 
 void main() {
   runApp(MyApp());

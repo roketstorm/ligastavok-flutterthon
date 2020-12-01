@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:lsflutterthon/styles.dart';
-import 'package:lsflutterthon/widgets/animations/loadingFaceWidget.dart';
-import 'package:lsflutterthon/widgets/greeContainerContent.dart';
+import 'package:lsflutterthon/widgets/green_container_content.dart';
 
 class GreenContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width - 32.0,
-      height: MediaQuery.of(context).size.height / 3.0,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
