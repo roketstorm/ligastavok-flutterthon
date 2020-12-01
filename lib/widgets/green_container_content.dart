@@ -3,7 +3,7 @@ import 'package:lsflutterthon/models/head2head.dart';
 import 'package:lsflutterthon/models/sport_event.dart';
 import 'package:lsflutterthon/styles.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:lsflutterthon/widgets/animations/loadingFaceWidget.dart';
+import 'package:lsflutterthon/widgets/animations/loading_face_widget.dart';
 
 // Контентная область контейнера (получение данных из Head2HeadBloc)
 class GreenContainerContent extends StatelessWidget {
