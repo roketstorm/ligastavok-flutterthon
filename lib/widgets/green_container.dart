@@ -11,7 +11,7 @@ class GreenContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     BlocProvider.of<Head2HeadBloc>(context).add(Head2HeadRequested(
-        team1: 'sr:competitor:4715', team2: 'sr:competitor:4698'));
+        team1: 'sr:competitor:44', team2: 'sr:competitor:35'));
     return Container(
       width: MediaQuery.of(context).size.width - 32.0,
       height: MediaQuery.of(context).size.height / 3.0,
@@ -31,7 +31,7 @@ class GreenContainer extends StatelessWidget {
         }
         if (state is Head2HeadLoadSuccess) {
           final head2head = state.head2head;
-          return GreenContainerContent();
+          return GreenContainerContent(head2head);
         }
         if (state is Head2HeadLoadFailure) {
           return Text("Failure State");

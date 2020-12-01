@@ -7,7 +7,8 @@ import 'package:meta/meta.dart';
 
 class Head2HeadApiClient {
   static const baseUrl = 'https://api.sportradar.us/soccer-xt3/intl';
-  static const languageCode = 'ru';
+  static const logoUrl = 'https://www.thesportsdb.com/api/v1/json/1/searchteams.php';
+  static const languageCode = 'en';
   static const format = '.json';
 
   final http.Client httpClient;
@@ -31,14 +32,16 @@ class Head2HeadApiClient {
 
   Future<String> getTeamLogo(String name) async {
     final url =
-        "/?country=$name";
+        "$logoUrl?t=$name";
     final response = await this.httpClient.get(url);
 
     if (response.statusCode != 200) {
       throw Exception('Error getting info');
     }
 
+    // TODO: check response.body for null
+
     final teamJson = jsonDecode(response.body);
-    return teamJson['imglogo'];
+    return teamJson['teams'][0]['strTeamBadge'];
   }
 }

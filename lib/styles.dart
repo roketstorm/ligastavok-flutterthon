@@ -19,4 +19,4 @@ const EdgeInsets CLASSICPADDING =
 
 const TextStyle HEADER = TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 18.0);
 const TextStyle HEADERYEAR = TextStyle(color: Colors.white, fontSize: 14.0);
-const TextStyle HEADERPOINTS = TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 18.0, letterSpacing: 12.0);
+const TextStyle HEADERPOINTS = TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20.0, letterSpacing: 16.0);
